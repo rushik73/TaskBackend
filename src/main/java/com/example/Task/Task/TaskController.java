@@ -67,7 +67,7 @@ public class TaskController {
         return "redirect:/tasks";
     }
 
-    @PostMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteTask(@PathVariable Long id) {
         taskRepository.deleteById(id);
         log.info("Deleted task with ID: {}", id);
